@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Resume/Profile Page</title>
+    <title>Interactive Resume/Profile Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,31 +11,30 @@
     <div class="container">
         <!-- Profile Section -->
         <div class="profile">
-            <img src="profile-photo.jpg" alt="Profile Photo" class="profile-photo">
-            <h1>John Doe</h1>
-            <p>Electrical Engineer | Software Developer | Entrepreneur</p>
+            <h1 id="name-display">John Doe</h1>
+            <p id="job-title-display">Electrical Engineer | Software Developer | Entrepreneur</p>
+            <p id="about-display">I am an experienced Electrical Engineer...</p>
         </div>
 
-        <!-- Information Section -->
-        <div class="info">
-            <h2>About Me</h2>
-            <p>Experienced Electrical Engineer with a passion for creating innovative software solutions and leading entrepreneurial ventures. Adept at tackling technical challenges and leading projects in dynamic environments.</p>
+        <!-- Form Section (User Input) -->
+        <div class="form-section">
+            <h2>Edit Your Profile</h2>
+            <form id="profile-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
 
-            <h2>Contact Information</h2>
-            <ul>
-                <li><strong>Email:</strong> john.doe@example.com</li>
-                <li><strong>Phone:</strong> +1 (234) 567-8901</li>
-                <li><strong>Location:</strong> San Francisco, CA</li>
-            </ul>
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" placeholder="Enter your job title">
 
-            <h2>Links</h2>
-            <ul class="links">
-                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com" target="_blank">GitHub</a></li>
-                <li><a href="https://portfolio.com" target="_blank">Portfolio</a></li>
-            </ul>
+                <label for="about">About You:</label>
+                <textarea id="about" placeholder="Tell us about yourself"></textarea>
+
+                <button type="button" onclick="updateProfile()">Save Profile</button>
+            </form>
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
+

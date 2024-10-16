@@ -1,4 +1,4 @@
-/* Reset some default browser styles */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +8,12 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-/* Container that holds the profile and information */
 .container {
     background-color: white;
     border-radius: 10px;
@@ -23,76 +21,48 @@ body {
     max-width: 800px;
     width: 100%;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
-/* Profile photo styling */
-.profile-photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 5px solid #0077cc;
-}
-
-/* Main profile name and short description */
+/* Profile Info */
 .profile h1 {
     font-size: 2em;
     color: #0077cc;
-    margin-bottom: 10px;
 }
 
 .profile p {
     font-size: 1.2em;
     color: #666;
-    margin-bottom: 20px;
 }
 
-/* About me and contact section */
-.info {
-    width: 100%;
-    padding: 0 20px;
+/* Form Section */
+.form-section {
+    margin-top: 20px;
     text-align: left;
 }
 
-/* Subheading styling */
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.form-section h2 {
     color: #0077cc;
 }
 
-/* Paragraph and list styling */
-p, ul {
-    margin-bottom: 20px;
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-ul {
-    list-style-type: none;
+button {
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Links section */
-.links a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: bold;
+button:hover {
+    background-color: #005fa3;
 }
 
-.links a:hover {
-    text-decoration: underline;
-}
-
-/* Make the page responsive */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-
-    .info {
-        padding: 0;
-    }
-}
